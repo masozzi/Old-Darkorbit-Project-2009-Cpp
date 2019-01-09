@@ -7,7 +7,7 @@
 #include <random>
 #include <limits>
 
-#include <boost\lexical_cast.hpp>
+#include <boost/lexical_cast.hpp>
 
 #include "coutcolor.h"
 

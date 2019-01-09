@@ -9,7 +9,7 @@
 #include <cmath>
 #include <chrono>
 #include <mutex>
-#include <boost\lexical_cast.hpp>
+#include <boost/lexical_cast.hpp>
 
 #include "Packeter.h"
 #include "Constants.h"

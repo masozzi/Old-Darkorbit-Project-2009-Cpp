@@ -4,8 +4,8 @@
 #include <iostream>
 #include <string>
 #include <deque>
-#include <boost\algorithm\string.hpp>
-#include <boost\lexical_cast.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/lexical_cast.hpp>
 //////////////////////////////////////////////////////////
 //		Packet Parsing
 //		This class provides a util-like system which automatically adds | between packet lines so you dont need to do it

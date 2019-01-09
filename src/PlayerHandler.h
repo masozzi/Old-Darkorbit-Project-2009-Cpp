@@ -14,16 +14,16 @@
 #include <memory>
 #include <functional>
 
-#include <boost\lexical_cast.hpp>
-#include <boost\asio.hpp>
-#include <boost\asio\steady_timer.hpp>
-#include <boost\algorithm\string.hpp>
-#include <boost\algorithm\clamp.hpp>
-#include <boost\math\special_functions\round.hpp>
-#include <boost\bind.hpp>
-#include <boost\shared_ptr.hpp>
-#include <boost\enable_shared_from_this.hpp>
-#include <boost\thread.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/asio.hpp>
+#include <boost/asio/steady_timer.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/algorithm/clamp.hpp>
+#include <boost/math/special_functions/round.hpp>
+#include <boost/bind.hpp>
+#include <boost/shared_ptr.hpp>
+#include <boost/enable_shared_from_this.hpp>
+#include <boost/thread.hpp>
 
 #include <windows.h>
 

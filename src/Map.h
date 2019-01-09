@@ -6,7 +6,7 @@
 #include <regex>
 #include <vector>
 #include <mutex>
-#include <boost\lexical_cast.hpp>
+#include <boost/lexical_cast.hpp>
 #include <map>
 
 #include "Enums.h"

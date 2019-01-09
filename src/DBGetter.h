@@ -8,7 +8,7 @@
 //rethink about mutex, pro: - it prevents any memory leak con: - it could easily be done externally (mutex only used on execute() so it doesnt provide full protection)
 #include <mutex>
 
-#include <boost\lexical_cast.hpp>
+#include <boost/lexical_cast.hpp>
 
 extern "C" {
 #include <mysql.h>

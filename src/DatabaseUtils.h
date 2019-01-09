@@ -7,9 +7,9 @@
 #include <string>
 #include <vector>
 
-#include <boost\algorithm\string.hpp>
-#include <boost\lexical_cast.hpp>
-#include <boost\exception_ptr.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/exception_ptr.hpp>
 
 #include "Defines.h"
 #include "Handler.h"

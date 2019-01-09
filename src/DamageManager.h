@@ -1,8 +1,8 @@
 #ifndef DamageManager_H
 #define DamageManager_H
-#include <boost\weak_ptr.hpp>
-#include <boost\shared_ptr.hpp>
-#include <boost\algorithm\clamp.hpp>
+#include <boost/weak_ptr.hpp>
+#include <boost/shared_ptr.hpp>
+#include <boost/algorithm/clamp.hpp>
 
 #include <iostream>
 #include <random>
