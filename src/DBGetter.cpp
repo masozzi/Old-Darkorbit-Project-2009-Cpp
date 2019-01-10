@@ -11,6 +11,7 @@ table: cuentas row: empresa  at: id 12
 
 */
 
+
 extern "C" {
 	//public MYSQL
 	MYSQL* g_pmysql_connection;

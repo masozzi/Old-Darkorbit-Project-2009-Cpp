@@ -18,8 +18,12 @@ extern "C" {
 
 class mysql_exception : public std::exception
 {
+	const char* what_arg;
+
 public:
-	explicit mysql_exception(const char* what) : std::exception(what) { }
+	explicit mysql_exception(const char* what_arg) : what_arg(what_arg) { }
+
+	const char* what() const noexcept override { return what_arg; }
 };
 
 extern "C" {
