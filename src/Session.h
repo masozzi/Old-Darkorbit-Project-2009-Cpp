@@ -5,8 +5,11 @@
 #include <map>
 #include <vector>
 #include <functional>
-#include <Windows.h>
 #include <shared_mutex>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+
 #include "Handler.h"
 #include "Map.h"
 

@@ -25,7 +25,9 @@
 #include <boost/enable_shared_from_this.hpp>
 #include <boost/thread.hpp>
 
+#ifdef _WIN32
 #include <windows.h>
+#endif
 
 //#include "Session.h"
 #include "SessionsManager.h"

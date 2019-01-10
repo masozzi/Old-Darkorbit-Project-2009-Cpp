@@ -2,7 +2,9 @@
 #define __COLOR_H__
 
 #include <iostream>
+#ifdef _WIN32
 #include <Windows.h>
+#endif
 
 enum class EColor
 {

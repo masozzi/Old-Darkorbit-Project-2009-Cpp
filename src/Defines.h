@@ -36,7 +36,9 @@ typedef unsigned short ore_t;
 typedef int pos_t;
 typedef unsigned short speed_t;
 typedef int map_t;
+#ifndef __linux__
 typedef unsigned long long id_t;
+#endif
 typedef unsigned int config_t;
 typedef unsigned short extraenergy_t;
 typedef unsigned int collectable_t;
