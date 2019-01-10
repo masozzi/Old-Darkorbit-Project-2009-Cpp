@@ -34,10 +34,11 @@ sources = [
   'src/MovementManager.cpp',
   'src/PolicyHandler.cpp'
 ]
-incdir = include_directories('/opt/mysql-connector-c-6.1.11/include')
+
+inc = include_directories('/usr/include/mysql')
 
 executable (
   'darkorbit',
   sources,
-  include_directories: incdir
+  include_directories: inc
 )
