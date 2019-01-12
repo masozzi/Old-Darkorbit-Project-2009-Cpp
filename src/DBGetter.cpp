@@ -69,7 +69,7 @@ extern "C" {
 			throw mysql_exception("MySQL Connection Error");
 		}
 		row = mysql_fetch_row(result);
-		return row ? row[0] : "<NULL-ITEM>"; // DBGetter is there to return values of only 1 FIELD, so the first ever result row item is returned, otherwise error
+		return row ? row[0] : strdup("<NULL-ITEM>"); // DBGetter is there to return values of only 1 FIELD, so the first ever result row item is returned, otherwise error
 	}
 
 
