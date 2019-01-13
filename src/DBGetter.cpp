@@ -82,7 +82,7 @@ extern "C" {
 		const size_t BUFFER_SIZE = 512;//enough buffer size for a query
 		char query_str[BUFFER_SIZE] = { 0 };
 		// TODO: not sql injection safe
-		snprintf(query_str, BUFFER_SIZE, "SELECT %s FROM %s WHERE %s = %" PRIu64 " ORDER BY %s ASC", column, from, id_str, id, id_str);
+		snprintf(query_str, BUFFER_SIZE, "SELECT %s FROM %s WHERE %s = %" PRIu32 " ORDER BY %s ASC", column, from, id_str, id, id_str);
 		/* 1. */
 		if (g_pmysql_connection == NULL)
 		{
