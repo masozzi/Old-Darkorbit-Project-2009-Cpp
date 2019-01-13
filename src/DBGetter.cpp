@@ -81,8 +81,8 @@ extern "C" {
 	bool CDBGetter::execute(bool canReconnect) {
 		const size_t BUFFER_SIZE = 512;//enough buffer size for a query
 		char query_str[BUFFER_SIZE] = { 0 };
-		// yo this is not sql injection safe, thats not my job, reader of this comment and code. that was my first project and i was a dumb child. now im just dumb
-		sprintf_s(query_str, BUFFER_SIZE, "SELECT %s FROM %s WHERE %s = %" PRIu64 " ORDER BY %s ASC", column, from, id_str, id, id_str);
+		// TODO: not sql injection safe
+		snprintf(query_str, BUFFER_SIZE, "SELECT %s FROM %s WHERE %s = %" PRIu64 " ORDER BY %s ASC", column, from, id_str, id, id_str);
 		/* 1. */
 		if (g_pmysql_connection == NULL)
 		{
