@@ -7,6 +7,7 @@
 #include <random>
 #include <limits>
 
+#include <boost/asio.hpp>
 #include <boost/lexical_cast.hpp>
 
 #include "coutcolor.h"
@@ -34,7 +35,6 @@ using std::clog;
 typedef std::pair<int, int> Position_t; //simple
 typedef unsigned short ore_t;
 typedef int pos_t;
-typedef unsigned short speed_t;
 typedef int map_t;
 #ifndef __linux__
 typedef unsigned long long id_t;
