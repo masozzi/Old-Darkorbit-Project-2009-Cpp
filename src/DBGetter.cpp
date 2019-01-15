@@ -73,7 +73,7 @@ extern "C" {
 	}
 
 
-	void CDBGetter::print_db_err(char* stage)
+	void CDBGetter::print_db_err(const char* stage)
 	{
 		std::cerr << "[DATABASE ERROR] " << stage << ": " << mysql_error(g_pmysql_connection) << std::endl;
 	}

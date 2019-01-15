@@ -100,7 +100,7 @@ extern "C" {
 		/*creates and executes query then iterates to the first row and returns its function (sql::ResultSet::first())
 		  scheme: SELECT x FROM y WHERE id = z ORDER BY id ASC
 		 */
-		void print_db_err(char*);
+		void print_db_err(const char*);
 		bool execute(bool canReconnect = true);
 	};
 }
