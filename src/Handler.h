@@ -43,7 +43,7 @@ protected:
 	std::atomic<bool>	m_bIsRepairing = false;
 public:
 
-	IHandler() : m_mm(nullptr), m_player{}, m_ammo{} {  }
+	IHandler() : m_player{}, m_mm(nullptr) m_ammo{} {  }
 
 	virtual ~IHandler() { }
 
