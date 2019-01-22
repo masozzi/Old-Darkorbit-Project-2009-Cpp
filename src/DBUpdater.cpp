@@ -18,7 +18,7 @@ extern "C" {
 	inline void CDBUpdater::changeTable(char* table) { this->from = table; }
 	inline void CDBUpdater::changeIdString(char* id_str) { this->id_str = id_str; }
 	inline void CDBUpdater::changeId(id_t id) { this->id = id; }
-	inline void CDBUpdater::changeSetValue(std::string t) { strcpy_s(this->set_value, strlen(set_value), t.c_str()); }
+	inline void CDBUpdater::changeSetValue(std::string t) { strncpy(this->set_value, t.c_str(), strlen(set_value)); }
 
 	void CDBUpdater::queryUpdate(void)
 	{
