@@ -25,14 +25,9 @@ extern "C" {
 		char* database;
 		char* set_value;
 	public:
-		CDBUpdater(char* database, char* column, char* table, char* id_str, id_t id) {
-			this->database = database;
-			this->id = id;
-			this->id_str = id_str;
-			this->column = column;
-			this->from = table;
-			this->set_value = "'0'";
-		}
+		CDBUpdater(char* database, char* column, char* table, char* id_str,
+				id_t id) : id(id), id_str(id_str), column(column), from(table),
+				database(database) { }
 
 		void changeQuery(char* column, char* table, char* id_str, id_t id, char* set_value);
 		void changeColumn(char* column);
