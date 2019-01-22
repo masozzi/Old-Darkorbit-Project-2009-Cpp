@@ -21,7 +21,9 @@
 #include "DBGetter.h"
 #include "DBUpdater.h"
 #include "ShipInfo.h"
+#ifdef _WIN32
 #include <shellapi.h>
+#endif
 #include "BonusBox.h"
 
 extern std::map<map_t, CMap> g_allMaps;
