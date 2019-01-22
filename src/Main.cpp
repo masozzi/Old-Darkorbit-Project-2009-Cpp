@@ -1,5 +1,7 @@
 //very ugly and cheesy but splitting both servers makes debugging easier
 #define BUILD_BOTH_SERVERS (BUILD_POLICY_SERVER == 1 && BUILD_GAME_SERVER == 1)
+#define BUILD_POLICY_SERVER 1
+#define BUILD_GAME_SERVER 1
 
 #include <cstdlib>
 #include <string>
