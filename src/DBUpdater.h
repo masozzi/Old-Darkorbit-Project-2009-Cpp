@@ -48,7 +48,7 @@ extern "C" {
 		/*
 		scheme: SELECT x FROM y WHERE id = z ORDER BY id ASC
 		*/
-		void print_db_err(char*);
+		void print_db_err(const char*);
 		bool execute(bool canReconnect = true);
 	};
 }
