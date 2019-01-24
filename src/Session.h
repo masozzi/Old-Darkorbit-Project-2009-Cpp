@@ -41,10 +41,10 @@ private:
 	//returns true if a client (session id) is already connected to the server
 	bool				containsSessionId(const std::string& sessionId);
 public:
-	explicit CSession(map_t mapid) :m_map(mapid),
-		m_connectionMutex(new std::shared_mutex),
+	explicit CSession(map_t mapid) : m_connectionMutex(new std::shared_mutex),
 		m_npcMutex(new std::shared_mutex),
-		m_collectableMutex(new std::shared_mutex)
+		m_collectableMutex(new std::shared_mutex),
+		m_map(mapid)
 	{
 		//dcout << "Creating session with mapid " << mapid << cendl;
 	}
