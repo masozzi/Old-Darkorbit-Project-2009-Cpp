@@ -82,7 +82,7 @@ extern "C" {
 
 		const size_t BUFFER_SIZE = 512;//enough buffer size for a query
 		char query_str[BUFFER_SIZE];
-		sprintf_s(query_str, BUFFER_SIZE, "UPDATE %s SET %s = %s WHERE %s = %" PRIu64, from,column,set_value,id_str,id);
+		snprintf(query_str, BUFFER_SIZE, "UPDATE %s SET %s = %s WHERE %s = %" PRIu32, from,column,set_value,id_str,id);
 		/* 1. */
 		if (g_pmysql_connection == NULL)
 		{
