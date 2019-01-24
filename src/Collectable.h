@@ -24,7 +24,7 @@ public:
 
 	std::vector<std::shared_ptr<ICollectable>>::iterator remove();
 	ICollectable(id_t id, pos_t x, pos_t y, std::reference_wrapper<CSession> session)
-		:m_session(session), m_type(-1), m_pos(x, y)
+		: m_type(-1), m_pos(x, y), m_session(session) 
 	{
 		m_id = id;
 	}
