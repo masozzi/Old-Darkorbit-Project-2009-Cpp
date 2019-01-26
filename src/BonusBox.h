@@ -20,6 +20,7 @@
 	battle maps:
 	cred,uri,ammo,jpe * 1.5 
 	2 EE
+*/
 
 /* Implementation of a bonus box on a space map */
 class CBonusBox : public ICollectable
