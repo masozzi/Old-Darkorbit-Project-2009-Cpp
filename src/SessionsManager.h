@@ -16,7 +16,7 @@
 class session_permanently_exists_exception : public std::exception
 {
 public:
-	session_permanently_exists_exception() : std::exception("Permanent Session already exists") { }
+	session_permanently_exists_exception() : std::runtime_error("Permanent Session already exists") { }
 };
 
 /*
