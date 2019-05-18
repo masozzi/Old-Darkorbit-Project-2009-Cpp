@@ -276,14 +276,14 @@ void CMob::rewardLoot()
 				w.experience_total = user->addEP(m_reward.exp);
 
 				try {
-					g_database_update.queryUpdateRaw(
+					std::string str(
 						"UPDATE cuentas "
 						"SET creditos = creditos + " + to_string(w.credits_loot) + ","
 						"uridium = uridium + " + to_string(w.uri_loot) + ","
 						"experiencia = experiencia + " + to_string(w.experience_loot) + ","
 						"honor = honor + " + to_string(w.honor_loot) + " "
 						"WHERE id = " + to_string(m_belongToId)
-					);
+					g_database_update.queryUpdateRaw(str);
 				}
 				catch (mysql_exception& me)
 				{
