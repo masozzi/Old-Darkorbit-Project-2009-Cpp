@@ -22,12 +22,11 @@ extern "C" {
 		char* id_str; //"clanID","id", etc.;a clear representation of the primary key name
 		char* column;
 		char* from;
-		char* database;
 		char* set_value;
 	public:
-		CDBUpdater(char* database, char* column, char* table, char* id_str,
-				id_t id) : id(id), id_str(id_str), column(column), from(table),
-				database(database) { }
+		CDBUpdater(char* column, char* table, char* id_str,
+				id_t id) : id(id), id_str(id_str), column(column), from(table)
+				{ }
 
 		void changeQuery(char* column, char* table, char* id_str, id_t id, char* set_value);
 		void changeColumn(char* column);
