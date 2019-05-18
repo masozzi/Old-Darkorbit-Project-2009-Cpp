@@ -19,6 +19,9 @@ damage_t CDamageManager::damageRocket(id_t id, ERocketType rockettype)
 		case ERocketType::PLT2021:
 			baseDamage = 4000;
 			break;
+		case ERocketType::WIZ:
+			baseDamage = 8000;
+			break;
 		}
 
 		return dmgdiff(baseDamage);
