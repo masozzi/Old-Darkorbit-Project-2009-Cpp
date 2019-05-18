@@ -3,11 +3,13 @@ void CFileWriter::writemore(const std::string& str2, std::string brackettext)
 {
 	static std::mutex write_m;
 	std::string addition = "";
-	if (brackettext != "")
-		if(brackettext.size() <= 5)
+	if (brackettext != "") {
+		if (brackettext.size() <= 5) {
 			addition = "[" + brackettext + "]\t\t";
-		else
+		} else {
 			addition = "[" + brackettext + "]\t";
+		}
+	}
 	boost::posix_time::ptime now = boost::posix_time::second_clock::local_time();
 	auto d = now.date();
 	std::string _m = boost::lexical_cast<std::string>(d.month().as_number());
