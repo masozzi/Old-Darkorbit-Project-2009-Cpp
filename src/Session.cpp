@@ -76,9 +76,9 @@ void CSession::addCollectable(std::shared_ptr<ICollectable> c)
 CSession::NpcContainer_t::iterator CSession::removeMob(id_t id)
 {
 	lockMobsWrite();
-	for (auto it =m_NPCs.begin(); it != m_NPCs.end();)
+	for (auto it = m_NPCs.begin(); it != m_NPCs.end();)
 	{
-		if (it._Ptr) //no i will rethink this later
+		if (it.get()) //no i will rethink this later
 		{
 
 			std::shared_ptr<CMob> mob = *it;
@@ -108,7 +108,7 @@ CSession::Collectables_t::iterator CSession::removeCollectable(id_t id)
 	lockCollectablesWrite();
 	for (auto it = m_collectables.begin(); it != m_collectables.end();)
 	{
-		if (it._Ptr)
+		if (it.get())
 		{
 
 			std::shared_ptr<ICollectable> coll = *it;
