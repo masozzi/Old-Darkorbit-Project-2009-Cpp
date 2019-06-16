@@ -40,14 +40,15 @@ extern "C" {
 
 		/* User Information */
 		id_t  id;
-		char* id_str; //"clanID","id", etc.;a clear representation of the primary key name
-		char* column;
-		char* from;
-		char* database;
+		const char* id_str; //"clanID","id", etc.;a clear representation of the primary key name
+		const char* column;
+		const char* from;
+		const char* database;
 
 	public:
 		CDBGetter(void) = delete;
-		CDBGetter(char* database, char* column, char* table, char* id_str, id_t id) : result(nullptr) {
+		CDBGetter(const char* database, const char* column, const char* table, const char* id_str, id_t id) :
+				result(nullptr) {
 			this->database = database;
 			this->id = id;
 			this->id_str = id_str;
@@ -62,10 +63,10 @@ extern "C" {
 		CDBGetter(const CDBGetter& dbcopy) = default;
 
 		void free();
-		void changeQuery(char* column, char* table, char* id_str, id_t id);
-		void changeColumn(char* column);
-		void changeTable(char* table);
-		void changeIdString(char* id_str);
+		void changeQuery(const char* column, const char* table, const char* id_str, id_t id);
+		void changeColumn(const char* column);
+		void changeTable(const char* table);
+		void changeIdString(const char* id_str);
 		void changeId(id_t id);
 
 		// DO NOT USE WITH USER INPUT DATA

@@ -27,15 +27,16 @@ extern "C" {
 			mysql_free_result(result);
 		}
 	}
-	void CDBGetter::changeQuery(char* column, char* table, char* id_str, id_t id) {
+	void CDBGetter::changeQuery(const char* column, const char* table, 
+			const char* id_str, id_t id) {
 		this->column = column;
 		this->from = table;
 		this->id_str = id_str;
 		this->id = id;
 	}
-	inline void CDBGetter::changeColumn(char* column) { this->column = column; }
-	inline void CDBGetter::changeTable(char* table) { this->from = table; }
-	inline void CDBGetter::changeIdString(char* id_str) { this->id_str = id_str; }
+	inline void CDBGetter::changeColumn(const char* column) { this->column = column; }
+	inline void CDBGetter::changeTable(const char* table) { this->from = table; }
+	inline void CDBGetter::changeIdString(const char* id_str) { this->id_str = id_str; }
 	inline void CDBGetter::changeId(id_t id) { this->id = id; }
 
 	void CDBGetter::setQueryRaw(const char * statement)
