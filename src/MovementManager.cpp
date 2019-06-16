@@ -119,13 +119,13 @@ Position_t CMovementManager::get_current_position() const
 	std::cout << "time_for_destination: " << time_for_destination << std::endl;
 	std::cout << "============" << std::endl;*/
 
-	if (local_pos.first <= planned_pos.first && tmpx > planned_pos.first ||
-		local_pos.first >= planned_pos.first && tmpx < planned_pos.first) {
+	if ((local_pos.first <= planned_pos.first && tmpx > planned_pos.first) ||
+		(local_pos.first >= planned_pos.first && tmpx < planned_pos.first)) {
 		//otherwise would continue moving after reaching goal
 		tmpx = planned_pos.first;
 	}
-	if (local_pos.second <= planned_pos.second && tmpy > planned_pos.second ||
-		local_pos.second >= planned_pos.second && tmpy < planned_pos.second) {
+	if ((local_pos.second <= planned_pos.second && tmpy > planned_pos.second) ||
+		(local_pos.second >= planned_pos.second && tmpy < planned_pos.second)) {
 		//otherwise would continue moving after reaching goal
 		tmpy = planned_pos.second;
 	}
@@ -157,8 +157,8 @@ pos_t CMovementManager::get_current_position_x() const
 	deg	 = std::atan2(delta_y, delta_x);
 	tmpx = std::cos(deg) * tmpz + local_pos.first;
 
-	if (local_pos.first <= planned_pos.first && tmpx > planned_pos.first ||
-		local_pos.first >= planned_pos.first && tmpx < planned_pos.first) {
+	if ((local_pos.first <= planned_pos.first && tmpx > planned_pos.first) ||
+		(local_pos.first >= planned_pos.first && tmpx < planned_pos.first)) {
 		//otherwise would continue moving after reaching goal
 		return planned_pos.first;
 	}
@@ -190,8 +190,8 @@ pos_t CMovementManager::get_current_position_y() const
 	deg  = std::atan2(delta_y, delta_x);
 	tmpy = std::sin(deg) * tmpz + local_pos.second;
 
-	if (local_pos.second <= planned_pos.second && tmpy > planned_pos.second ||
-		local_pos.second >= planned_pos.second && tmpy < planned_pos.second) {
+	if ((local_pos.second <= planned_pos.second && tmpy > planned_pos.second) ||
+		(local_pos.second >= planned_pos.second && tmpy < planned_pos.second)) {
 		//otherwise would continue moving after reaching goal
 		return planned_pos.second;
 	}
